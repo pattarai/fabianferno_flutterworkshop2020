@@ -5,6 +5,7 @@ import 'package:icon_shadow/icon_shadow.dart';
 import 'package:parallax_image/parallax_image.dart';
 import 'read_more.dart';
 import 'pushpop.dart';
+import 'login.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -43,7 +44,7 @@ class BioData extends StatelessWidget {
                             bottomRight: Radius.circular(0)),
                         image: DecorationImage(
                             image: AssetImage('images/waretpeace.jpg'),
-                            fit: BoxFit.fitWidth,
+                            fit: BoxFit.fitHeight,
                             alignment: Alignment.topCenter,
                             colorFilter: ColorFilter.mode(
                                 (Colors.teal.withOpacity(0.3)),
@@ -51,7 +52,8 @@ class BioData extends StatelessWidget {
                     height: 300,
                     child: InkWell(
                       onTap: () {
-                        launch("https://fabianferno.wordpress.com/");
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => LoginPage()));
                       },
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -279,7 +281,6 @@ class BioData extends StatelessWidget {
                                     Text(
                                       "Click here.",
                                       style: TextStyle(
-
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
                                           fontSize: 20),
