@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:icon_shadow/icon_shadow.dart';
 import 'package:parallax_image/parallax_image.dart';
 import 'read_more.dart';
+import 'pushpop.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -266,7 +267,7 @@ class BioData extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ReadMore()));
+                                        builder: (context) => Stacker()));
                               },
                               //test1
                               child: Container(
