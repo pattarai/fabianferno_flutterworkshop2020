@@ -4,7 +4,7 @@ import 'package:hello_world_flutter/main.dart';
 import 'pushpop.dart';
 import 'main.dart';
 import 'snackbar_demo.dart';
-
+import 'Webview_demo.dart';
 
 class DrawerItem {
   String title;
@@ -20,6 +20,7 @@ class HomeScreen extends StatefulWidget {
     new DrawerItem("Blog", Icons.book),
     new DrawerItem("Stacker Exercise", Icons.tab),
     new DrawerItem("Snackbar", Icons.space_bar),
+    new DrawerItem("Fabrowser", Icons.web),
   ];
 
   @override
@@ -47,6 +48,9 @@ class HomeScreenState extends State<HomeScreen> {
         break;
       case 3:
         return SnackbarDemo();
+        break;
+      case 4:
+        return Fabrowser();
         break;
       default:
         return new Text("Error");
