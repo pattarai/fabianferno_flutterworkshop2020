@@ -11,11 +11,6 @@ class _LoginPage extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        centerTitle: true,
-        title: Text("Sign In"),
-      ),
       body: Container(
         color: Colors.black87,
         padding: const EdgeInsets.all(20),
@@ -75,22 +70,28 @@ class _LoginPage extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  color: Colors.teal,
                   width: 320,
                   child: RaisedButton(
+                    color: Colors.teal,
+                    onPressed: (){
+                      print("Logged in");
+                    },
                     child: Text(
-                      "Login",
+                      "LOGIN",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
                 Padding(padding: EdgeInsets.all(10)),
                 Container(
-                  color: Colors.green,
                   width: 320,
                   child: RaisedButton(
+                    color: Colors.green,
+                    onPressed: (){
+                      print("Signing up");
+                    },
                     child: Text(
-                      "Sign up",
+                      "SIGNUP",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

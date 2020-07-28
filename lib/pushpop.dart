@@ -15,10 +15,6 @@ class _Stacker extends State<Stacker> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stacker Exercise"),
-        backgroundColor: Colors.teal,
-      ),
       body: Container(
         color: Colors.black87,
         height: 520,

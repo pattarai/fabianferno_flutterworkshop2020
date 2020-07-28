@@ -6,11 +6,12 @@ import 'package:parallax_image/parallax_image.dart';
 import 'read_more.dart';
 import 'pushpop.dart';
 import 'login.dart';
+import 'drawer.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: BioData(),
+    home: HomeScreen(),
   ));
 }
 
