@@ -5,6 +5,7 @@ import 'pushpop.dart';
 import 'main.dart';
 import 'snackbar_demo.dart';
 import 'Webview_demo.dart';
+import 'Calculator.dart';
 
 class DrawerItem {
   String title;
@@ -16,11 +17,12 @@ class DrawerItem {
 class HomeScreen extends StatefulWidget {
 
   var drawerItems = [
-    new DrawerItem("Login", Icons.assignment_ind),
+    new DrawerItem("Login", Icons.vpn_key),
     new DrawerItem("Blog", Icons.book),
     new DrawerItem("Stacker Exercise", Icons.tab),
     new DrawerItem("Snackbar", Icons.space_bar),
     new DrawerItem("Fabrowser", Icons.web),
+    new DrawerItem("Basic Calculator", Icons.account_balance_wallet),
   ];
 
   @override
@@ -52,6 +54,9 @@ class HomeScreenState extends State<HomeScreen> {
       case 4:
         return Fabrowser();
         break;
+      case 5:
+        return Calculator();
+        break;
       default:
         return new Text("Error");
         break;
@@ -76,8 +81,8 @@ class HomeScreenState extends State<HomeScreen> {
         );
       }
       drawerOptions.add(new ListTile(
-        leading: new Icon(d.icon),
-        title: new Text(d.title),
+        leading: new Icon(d.icon,color: Colors.tealAccent,),
+        title: new Text(d.title,style: TextStyle(color: Colors.tealAccent),),
         selected: i == _selectedDrawerIndex,
         onTap: () => _onSelectItem(i),
       ));
@@ -94,22 +99,26 @@ class HomeScreenState extends State<HomeScreen> {
       ),
       drawer: new Drawer(
         child: SingleChildScrollView(
-          child: new Column(
-            children: <Widget>[
-              new UserAccountsDrawerHeader(
-                accountName: new Text("Fabian Ferno"),
-                accountEmail: new Text("@super.skywalker"),
-                currentAccountPicture: CircleAvatar(
-                  radius: 60.0,
-                  backgroundColor: const Color(0xFF778899),
-                  backgroundImage: NetworkImage("https://i.pinimg.com/originals/d5/51/2b/d5512bab9961e7a5c599bcf16250a9ed.jpg"), // for Network image
+          child: Container(
+            height: 800,
+            color: Colors.black87,
+            child: new Column(
+              children: <Widget>[
+                new UserAccountsDrawerHeader(
+                  accountName: new Text("Fabian Ferno"),
+                  accountEmail: new Text("@super.skywalker"),
+                  currentAccountPicture: CircleAvatar(
+                    radius: 60.0,
+                    backgroundColor: Colors.black87,
+                    backgroundImage: NetworkImage("https://i.pinimg.com/originals/d5/51/2b/d5512bab9961e7a5c599bcf16250a9ed.jpg"), // for Network image
+                  ),
+                  decoration: new BoxDecoration(
+                    color: Color(0xff101010),
+                  ),
                 ),
-                decoration: new BoxDecoration(
-                  color: Colors.black87,
-                ),
-              ),
-              new Column(children: drawerOptions)
-            ],
+                new Column(children: drawerOptions)
+              ],
+            ),
           ),
         ),
       ),

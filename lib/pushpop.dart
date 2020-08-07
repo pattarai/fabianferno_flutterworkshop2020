@@ -29,11 +29,11 @@ class _Stacker extends State<Stacker> {
                 child: Text(
                   "Stack em up - Numbers dood!",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                  style: TextStyle(fontSize: 18, color: Colors.tealAccent),
                 ),
               ),
               Container(
-                color: Colors.teal,
+                color: Color(0xff404040),
                 padding: EdgeInsets.all(25),
                 child: TextFormField(
                   style: TextStyle(
@@ -69,7 +69,7 @@ class _Stacker extends State<Stacker> {
                   Container(
                     width: 320,
                     child: RaisedButton(
-                        color: Colors.green,
+                        color: Colors.tealAccent,
                         child: Text("PUSH"),
                         onPressed: () {
                           stack.add(int.parse(_stackController.text));
@@ -80,7 +80,7 @@ class _Stacker extends State<Stacker> {
                   Container(
                     width: 320,
                     child: RaisedButton(
-                        color: Colors.red,
+                        color: Colors.white,
                         child: Text("POP"),
                         onPressed: () {
                           try {
